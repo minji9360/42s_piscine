@@ -6,21 +6,28 @@
 /*   By: minjikim <va9360@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 11:54:08 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/04 15:57:11 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/04 18:34:32 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
+void ft_putchar(char c);
 void rush(int x, int y);
+void horizontal(int a, int b, int x);
 
-int			main(void)
+int		main(void)
 {
-	rush(1, 5);
+	rush(4, 5);
 	return (0);
 }
 
-void		rush(int x, int y)
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	rush(int x, int y)
 {
 	int a;
 	int b;
@@ -31,43 +38,32 @@ void		rush(int x, int y)
 	{
 		if (b == 1 || b == y)
 		{
-			while (a <= x)
-			{
-				if (a == 1 || a == x)
-				{
-					write(1, "o", 1);
-					if (a == x)
-					{
-						write(1, "\n", 1);
-						break;
-					}
-				}
-				else if (a < x)
-					write(1, "-", 1);
-				a++;
-			}
-			b++;
-			a = 1;
+			horizontal(a, b, x);
 		}
 		else
 		{
-			while (a <= x)
-			{
-				if (a == 1 || a == x)
-				{
-					write(1, "|", 1);
-					if (a == x)
-					{
-						write(1, "\n", 1);
-						break;
-					}
-				}
-				else if (a < x)
-					write(1, " ", 1);
-				a++;
-			}
-			b++;
 			a = 1;
+			horizontal(a, b, x);
 		}
 	}
+}
+
+void	horizontal(int x, int a, int b)
+{
+	while (a <= x)
+	{
+		if (a == 1 || a == x)
+		{
+			ft_putchar('o');
+			if (a == x)
+			{
+				ft_putchar('\n');
+				break;
+			}
+		}
+		else if (a < x)
+			ft_putchar('-');
+		a++;
+	}
+	b++;
 }
