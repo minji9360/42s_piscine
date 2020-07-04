@@ -6,17 +6,17 @@
 /*   By: minjikim <va9360@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 11:54:08 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/04 15:19:44 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/04 15:57:11 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
 void rush(int x, int y);
 
 int			main(void)
 {
-	rush(1, 1);
+	rush(1, 5);
 	return (0);
 }
 
@@ -35,15 +35,15 @@ void		rush(int x, int y)
 			{
 				if (a == 1 || a == x)
 				{
-					printf("o");
+					write(1, "o", 1);
 					if (a == x)
 					{
-						printf("\n");
+						write(1, "\n", 1);
 						break;
 					}
 				}
 				else if (a < x)
-					printf("-");
+					write(1, "-", 1);
 				a++;
 			}
 			b++;
@@ -55,15 +55,15 @@ void		rush(int x, int y)
 			{
 				if (a == 1 || a == x)
 				{
-					printf("|");
+					write(1, "|", 1);
 					if (a == x)
 					{
-						printf("\n");
+						write(1, "\n", 1);
 						break;
 					}
 				}
 				else if (a < x)
-					printf(" ");
+					write(1, " ", 1);
 				a++;
 			}
 			b++;
