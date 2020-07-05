@@ -1,17 +1,18 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: minjikim <minjikim@student.42seoul.kr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/05 17:11:39 by minjikim          #+#    #+#             */
+/*   Updated: 2020/07/06 01:37:07 by minjikim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
-void ft_putchar(char);
-
-int main(void)
+void	ft_putchar(char c)
 {
-	char c;
-
-	scanf("%s", c, sizeof(c));
-	ft_putchar(c);
-}
-
-void ft_putchar(char)
-{
-	ssize_t write(1, &c, sizeof(c));
+	write(1, &c, 1);
 }
