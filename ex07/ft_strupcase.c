@@ -6,7 +6,7 @@
 /*   By: minjikim <minjikim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 03:50:16 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/09 05:05:34 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/09 12:08:39 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,9 @@ int		main(void)
 	int j;
 
 	j = 0;
-	char str[100] = "sTdsdfsDC1CDdddss";
+	char str[100] = "sT23dsdfsDC1CDdddss";
 	char str2[100] = {};
 	*str2 = *ft_strupcase(str);
-	while(j <= 100)
-	{
-		printf("%c", str2[j]);
-		j++;
-	}
 }
 
 char	*ft_strupcase(char *str)
