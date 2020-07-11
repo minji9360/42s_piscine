@@ -6,18 +6,11 @@
 /*   By: minjikim <minjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 01:40:09 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/06 01:58:46 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/11 21:16:34 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-void ft_print_alphabet(void);
-
-int		main(void)
-{
-	ft_print_alphabet();
-}
 
 void	ft_print_alphabet(void)
 {
