@@ -6,18 +6,11 @@
 /*   By: minjikim <minjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 03:47:09 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/06 03:59:36 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/11 21:15:42 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-void ft_is_negative(int n);
-
-int		main(void)
-{
-	ft_is_negative(5);
-}
 
 void	ft_is_negative(int n)
 {
