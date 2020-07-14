@@ -6,18 +6,11 @@
 /*   By: minjikim <minjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 02:11:13 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/06 04:03:50 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/14 21:09:55 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-void ft_print_reverse_alphabet(void);
-
-int		main(void)
-{
-	ft_print_reverse_alphabet();
-}
 
 void	ft_print_reverse_alphabet(void)
 {
