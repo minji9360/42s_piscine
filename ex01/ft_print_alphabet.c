@@ -6,7 +6,7 @@
 /*   By: minjikim <minjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 01:40:09 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/11 21:16:34 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/14 21:20:18 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_print_alphabet(void)
 {
-	char letter = 'a';
+	char alphabet;
 
-	while (letter <= 'z')
+	alphabet = 'a';
+	while (alphabet <= 'z')
 	{
-		write(1, &letter, 1);
-
-		letter++;
+		write(1, &alphabet, 1);
+		alphabet++;
 	}
 }
