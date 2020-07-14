@@ -6,7 +6,7 @@
 /*   By: minjikim <minjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 02:11:13 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/14 21:09:55 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/14 22:59:12 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_print_reverse_alphabet(void)
 {
-	char letter;
+	char alphabet;
 
-	letter = 'z';
-	while (letter >= 'a')
+	alphabet = 'z';
+	while (alphabet >= 'a')
 	{
-		write(1, &letter, 1);
-		letter--;
+		write(1, &alphabet, 1);
+		alphabet--;
 	}
 }
