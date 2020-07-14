@@ -5,51 +5,36 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: minjikim <minjikim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/07 02:19:38 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/07 03:23:20 by minjikim         ###   ########.fr       */
+/*   Created: 2020/07/07 01:15:07 by minjikim          #+#    #+#             */
+/*   Updated: 2020/07/14 21:32:32 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_print_comb2(void);
-void ft_print(char c);
-
-int		main(void)
-{
-	ft_print_comb2();
-}
-
-void	ft_print(char c)
-{
-	write(1, &c, 1);
-}
-
 void	ft_print_comb2(void)
 {
-	char array[5] = {'0', '0', ' ', '0', '1'};
-	while (array[0] != 9 || array[1] != 8 || array[3] != 9 || array[4] != 9)
+	int		first_num;
+	int		second_num;
+	char	num[4];
+
+	first_num = 0;
+	while (first_num <= 98)
 	{
-		ft_print(array[0]);
-		ft_print(array[1]);
-		array[3] = array[0];
-		
-		array[4] = array[3] + 1;
-		ft_print(array[2]);
-		while (array[4] <= 9)
+		second_num = first_num + 1;
+		while (second_num <= 99)
 		{
-			ft_print(array[3]);
-			ft_print(array[4]);
-
-			array[4] = array[4] + 1;
-
-			if (array[4] == 9)
-			{
-				array[3] = array[3] + 1;
-				array[4] = 0;
-			}
+			num[0] = '0' + first_num / 10;
+			num[1] = '0' + first_num % 10;
+			num[2] = '0' + second_num / 10;
+			num[3] = '0' + second_num % 10;
+			write(1, &num, 2);
+			write(1, " ", 1);
+			write(1, &num[2], 2);
+			if (first_num < 98)
+				write(1, ", ", 2);
+			second_num++;
 		}
-		ft_print(',');
-		ft_print(' ');
+		first_num++;
 	}
 }
