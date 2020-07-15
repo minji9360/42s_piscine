@@ -6,14 +6,14 @@
 /*   By: minjikim <minjikim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 13:55:40 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/07 21:47:45 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/16 03:12:48 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_ultimate_div_mod(int *a, int *b)
 {
 	int temp;
-	
+
 	temp = *a;
 	*a = *a / *b;
 	*b = temp % *b;
