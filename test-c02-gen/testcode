@@ -1,3 +1,14 @@
+include:
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdarg.h>
+#include <unistd.h>
+#include <string.h>
+ex00-other:
+
+// hello world!!
+
+
 ex00:
 
 	char c[20];
@@ -14,20 +25,21 @@ ujuj
 
 
 
+
 ex01:
-	int i;
 	char c[20];
 
-	for(i=0;i<20;i++)
 	printf("%s\n", ft_strncpy(c, "1234567891234567890", 21));
 	printf("%s\n", ft_strncpy(c, "ujuj", 3));
-	printf("%s\n", ft_strncpy(c, "1234", 9));
+	printf("%s\n", ft_strncpy(c, "1234", 20));
+	write(1, c, 20);
 
 ex01-expected:
-12345678912345678900
-uju45678912345678900
-1234
 
+1234567891234567890
+uju4567891234567890
+1234
+1234
 
 ex02:
 
@@ -140,18 +152,6 @@ ex10:
 
 ex10-expected:
 
-returned - 6, string - abcdef
-returned - 6, string - 12345
-returned - 6, string - abcdef
-returned - 6, string - 12
-returned - 5, string - 12
--------------------
-returned - 6, string - abcdef
-returned - 6, string - 12345
-returned - 6, string - abcdef
-returned - 6, string - 12
-returned - 5, string - 12
-
 ex11:
 	char o[100] = "Coucou\ntu vas bien ?";
 	ft_putstr_non_printable(o);
@@ -178,6 +178,7 @@ ex12:
 	return (0);
 
 ex12-expected:
+(메모리 주소는 달라질 수 있습니다.)
 00007ffee93d4590: 0102 0304 0506 0708 090a 0b0c 0d0e 0f10 ................
 00007ffee93d45a0: 1112 1314 1516 1718 191a 1b1c 1d1e 1f20 ...............
 00007ffee93d45b0: 2122 2324 2526 2728 292a 2b2c 2d2e 2f30 !"#$%&'()*+,-./0
