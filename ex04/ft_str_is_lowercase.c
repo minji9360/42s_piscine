@@ -6,7 +6,7 @@
 /*   By: minjikim <minjikim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 02:14:05 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/09 02:55:04 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/14 17:36:24 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int ft_str_is_lowercase(char *str);
 
 int main(void)
 {
-	char str[200] = {"ssbss"};
+	char str[200] = {""};
 	printf("%d", ft_str_is_lowercase(str));
 }
 
@@ -38,5 +38,7 @@ int ft_str_is_lowercase(char *str)
 			a = 1;
 		i++;
 	}
+	if(str[i] == '\0')
+		a = 1;
 	return a;	
 }

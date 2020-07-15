@@ -6,7 +6,7 @@
 /*   By: minjikim <minjikim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 03:09:49 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/09 04:31:21 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/14 17:41:34 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int ft_str_is_printable(char *str);
 
 int		main(void)
 {
-	char str[200] = {" "};
+	char str[200] = {"\0"};
 	printf("%d", ft_str_is_printable(str));
 }
 
@@ -26,7 +26,7 @@ int		ft_str_is_printable(char *str)
 	int a;
 
 	i = 0;
-	a = 0;
+	a = 1;
 	while(str[i] != '\0')
 	{
 		if(!(str[i] >= ' ' && str[i] <= '~'))
@@ -34,8 +34,6 @@ int		ft_str_is_printable(char *str)
 			a = 0;
 			break;
 		}
-		else
-			a = 1;
 		i++;
 	}
 	return a;

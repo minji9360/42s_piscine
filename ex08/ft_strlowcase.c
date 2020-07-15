@@ -6,7 +6,7 @@
 /*   By: minjikim <minjikim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 05:08:29 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/09 05:32:25 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/14 17:43:41 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char *ft_strlowcase(char *str);
 
 int		main(void)
 {
-	char test[50] = {"sdfSGeDefsD"};
+	char test[50] = {"sdf123SGeDefsD"};
 	char result[50] = {};
 	*result = *ft_strlowcase(test);
 }
