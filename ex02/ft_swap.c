@@ -6,7 +6,7 @@
 /*   By: minjikim <minjikim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 11:45:50 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/07 21:46:44 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/16 03:10:49 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,4 @@ void	ft_swap(int *a, int *b)
 	temp = *a;
 	*a = *b;
 	*b = temp;
-	write(1, *a, 2);
-	write(1, *b, 2);
 }
