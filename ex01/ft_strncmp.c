@@ -6,7 +6,7 @@
 /*   By: minjikim <minjikim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 16:01:33 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/09 16:53:44 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/18 18:55:54 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		main(void)
 
 int		ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int i;
+	unsigned int i;
 	
 	i = 0;
 	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
@@ -40,19 +40,19 @@ int		ft_strncmp(char *s1, char *s2, unsigned int n)
 			continue;
 		}
 		else if (s1[i] > s2[i])
-			return 1;
+			return (1);
 		else if (s1[i] < s2[i])
-			return -1;
+			return (-1);
 
 		i++;
 	}
 
-	if (n == i)
-		return 0;
+	if (i == n)
+		return (0);
 	else if (s1[i] == '\0' && s2[i] == '\0')
-		return 0;
+		return (0);
 	else if (s1[i] > s2[i])
-		return 1;
+		return (1);
 
-	else return -1;
+	else return (-1);
 }
