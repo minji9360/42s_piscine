@@ -6,25 +6,9 @@
 /*   By: minjikim <minjikim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 20:33:48 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/19 03:51:16 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/19 04:19:59 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <string.h>
-
-char *ft_strncat(char *dest, char *src, unsigned int nb);
-
-int		main(void)
-{
-	char dest[20];
-	char src[20];
-	strcpy(dest, "To be ");
-	strcpy(src, "or not to be");
-	strncat(dest, src, 3);
-	puts(dest);
-	return 0;
-}
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
