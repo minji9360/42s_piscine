@@ -6,7 +6,7 @@
 /*   By: minjikim <minjikim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 01:15:12 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/17 22:12:05 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/19 21:35:12 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,9 @@ int		ft_str_is_numeric(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] >= '0' && str[i] <= '9')
-			return (1);
-		else
+		if (str[i] < '0' || str[i] > '9')
 			return (0);
 		i++;
 	}
-	return (0);
+	return (1);
 }
