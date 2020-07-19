@@ -6,37 +6,35 @@
 /*   By: minjikim <minjikim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 05:37:01 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/19 18:30:04 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/19 21:32:08 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcapitalize(char *str)
 {
-	int i;
 	int flag;
 
-	i = 0;
 	flag = 1;
-	while (str[i] != '\0')
+	while (str != '\0')
 	{
-		if (flag == 1 && (str[i] >= 'a' && str[i] <= 'z'))
+		if (flag == 1 && (*str >= 'a' && *str <= 'z'))
 		{
-			str[i] -= 32;
+			str -= 32;
 			flag = 0;
 		}
 		else
 		{
-			if (flag == 0 && (str[i] >= 'A' && str[i] <= 'Z'))
-				str[i] += 32;
-			else if (flag == 1 && (str[i] >= 'A' && str[i] <= 'Z'))
+			if (flag == 0 && (*str >= 'A' && *str <= 'Z'))
+				str += 32;
+			else if (flag == 1 && (*str >= 'A' && *str <= 'Z'))
 				flag = 0;
-			else if (str[i] >= '0' && str[i] <= '9')
+			else if (*str >= '0' && *str <= '9')
 				flag = 0;
-			else if (str[i] == ' ' || !((str[i] >= 'a' && str[i] <= 'z')
-						|| (str[i] >= 'A' && str[i] <= 'Z')))
+			else if (*str == ' ' || !((*str >= 'a' && *str <= 'z')
+						|| (*str >= 'A' && *str <= 'Z')))
 				flag = 1;
 		}
-		i++;
+		str++;
 	}
 	return (str);
 }
