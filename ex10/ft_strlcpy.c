@@ -6,7 +6,7 @@
 /*   By: minjikim <minjikim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/14 18:27:28 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/17 22:43:17 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/19 18:40:26 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,5 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 		}
 		dest[b] = '\0';
 	}
-
 	return (a);
 }

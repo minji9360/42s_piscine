@@ -6,7 +6,7 @@
 /*   By: minjikim <minjikim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/09 05:08:29 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/17 22:22:34 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/19 18:39:14 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ char	*ft_strlowcase(char *str)
 	{
 		if (str[i] >= 'A' && str[i] <= 'Z')
 			str[i] += 32;
-		printf("%c", str[i]);
 		i++;
 	}
 	return (str);
