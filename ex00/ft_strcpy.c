@@ -6,7 +6,7 @@
 /*   By: minjikim <minjikim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 23:14:19 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/14 11:53:01 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/19 21:34:15 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ char	*ft_strcpy(char *dest, char *src)
 		*(dest + i) = *(src + i);
 		i++;
 	}
+	*(dest + i) = *(src + i);
 	return (dest);
 }
