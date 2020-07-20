@@ -6,7 +6,7 @@
 /*   By: minjikim <minjikim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 04:58:58 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/19 05:07:29 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/20 12:57:40 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,10 @@
 
 void	ft_putstr(char *str)
 {
-	char i;
+	int i;
 
 	i = 0;
 	while (str[i] != '\0')
 		i++;
 	write(1, str, i);
-}
-
-int		main(void)
-{
-	ft_putstr("How Can I alive in Piscine");
 }
