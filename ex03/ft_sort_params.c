@@ -6,7 +6,7 @@
 /*   By: minjikim <minjikim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 01:53:16 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/21 07:55:35 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/21 08:50:39 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int		compare_str(char *str1, char *str2)
 
 char	**change_str(int argc, char **argv)
 {
-	int i;
-	int count;
-	char *temp;
+	int		i;
+	int		count;
+	char	*temp;
 
 	count = argc - 1;
 	i = 1;
@@ -60,9 +60,9 @@ int		main(int argc, char **argv)
 	i = 1;
 	j = 0;
 	argv = change_str(argc, argv);
-	while(i < argc)
+	while (i < argc)
 	{
-		while(argv[i][j])
+		while (argv[i][j])
 		{
 			write(1, &argv[i][j], 1);
 			j++;

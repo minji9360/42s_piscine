@@ -6,7 +6,7 @@
 /*   By: minjikim <minjikim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 00:47:14 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/21 01:23:41 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/21 09:05:41 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 int		main(int argc, char **argv)
 {
-	int i;
+	int		i;
 
+	(void)argc;
 	i = 0;
 	while (argv[0][i] != '\0')
 		i++;
-	write (1, argv[0], i);
-	write (1, "\n", 1);
+	write(1, argv[0], i);
+	write(1, "\n", 1);
 	return (0);
 }
