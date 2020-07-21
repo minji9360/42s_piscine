@@ -6,7 +6,7 @@
 /*   By: minjikim <minjikim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 01:53:16 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/21 08:50:39 by minjikim         ###   ########.fr       */
+/*   Updated: 2020/07/21 10:45:14 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ int		compare_str(char *str1, char *str2)
 	i = 0;
 	while (str1[i] != '\0' || str2[i] != '\0')
 	{
-		if (str1[i] > str2[i])
-			return (1);
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
 		i++;
 	}
-	return (0);
+	return (str1[i] - str2[i]);
 }
 
 char	**change_str(int argc, char **argv)
@@ -32,13 +32,13 @@ char	**change_str(int argc, char **argv)
 	int		count;
 	char	*temp;
 
-	count = argc - 1;
-	i = 1;
-	while (count > 0)
+	count = 1;
+	i = count + 1;
+	while (count < argc)
 	{
-		while (i < count)
+		while (i < argc)
 		{
-			if (compare_str(argv[i], argv[i + 1]))
+			if (compare_str(argv[i], argv[i + 1]) > 0)
 			{
 				temp = argv[i];
 				argv[i] = argv[i + 1];
@@ -47,7 +47,7 @@ char	**change_str(int argc, char **argv)
 			i++;
 		}
 		i = 1;
-		count--;
+		count++;
 	}
 	return (argv);
 }
