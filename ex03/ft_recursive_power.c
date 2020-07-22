@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   ft_recursive_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: minjikim <minjikim@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: minjikim <minjikim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/20 19:03:05 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/22 12:41:46 by minjikim         ###   ########.fr       */
+/*   Created: 2020/07/20 17:19:10 by minjikim          #+#    #+#             */
+/*   Updated: 2020/07/20 18:05:44 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_is_prime(int nb)
+int		ft_recursive_power(int nb, int power)
 {
-	int i;
+	int result;
 
-	i = 2;
-	if (nb <= 1)
+	result = 1;
+	if (nb < 0 && power < 0)
 		return (0);
-	while (1)
-		if (i <= nb - 1)
+	else if (nb == 0 && power == 0)
+		return (1);
+	else
+		while (power > 0)
 		{
-			if (nb % i == 0)
-				return (0);
-			else
-				i++;
+			result *= nb;
+			power--;
 		}
-		else
-			return (1);
+	return (result);
 }

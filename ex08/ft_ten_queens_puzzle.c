@@ -1,30 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   ft_ten_queens_puzzle.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: minjikim <minjikim@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: minjikim <minjikim@student.42seoul.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/20 19:03:05 by minjikim          #+#    #+#             */
-/*   Updated: 2020/07/22 12:41:46 by minjikim         ###   ########.fr       */
+/*   Created: 2020/07/20 21:47:16 by minjikim          #+#    #+#             */
+/*   Updated: 2020/07/20 21:47:42 by minjikim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_is_prime(int nb)
+int		ft_ten_queens_puzzle(void)
 {
-	int i;
-
-	i = 2;
-	if (nb <= 1)
-		return (0);
-	while (1)
-		if (i <= nb - 1)
-		{
-			if (nb % i == 0)
-				return (0);
-			else
-				i++;
-		}
-		else
-			return (1);
 }
