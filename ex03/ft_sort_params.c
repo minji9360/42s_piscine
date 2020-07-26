@@ -12,7 +12,7 @@
 
 #include <unistd.h>
 
-int		compare_str(char *str1, char *str2)
+int		ft_strcmp(char *str1, char *str2)
 {
 	int i;
 
@@ -38,7 +38,7 @@ char	**change_str(int argc, char **argv)
 	{
 		while (i < argc)
 		{
-			if (compare_str(argv[i], argv[i + 1]) > 0)
+			if (ft_strcmp(argv[i], argv[i + 1]) > 0)
 			{
 				temp = argv[i];
 				argv[i] = argv[i + 1];
